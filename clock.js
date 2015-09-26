@@ -23,10 +23,10 @@ Clock.prototype.run = function () {
 Clock.prototype._tick = function () {
   // 1. Increment the currentTime.
   // 2. Call printTime.
-    var total_seconds = this.seconds + this.minutes * 60 + this.hours * 3600 + 5;
-    this.seconds = Math.floor(total_seconds % 60);
-    this.hours = Math.floor(total_seconds / 3600);
-    this.minutes = Math.floor((total_seconds - this.hours * 3600) / 60);
+    var totalSeconds = this.seconds + this.minutes * 60 + this.hours * 3600 + 5;
+    this.seconds = Math.floor(totalSeconds % 60);
+    this.hours = Math.floor(totalSeconds / 3600);
+    this.minutes = Math.floor((totalSeconds - this.hours * 3600) / 60);
 
     this.printTime();
 };
